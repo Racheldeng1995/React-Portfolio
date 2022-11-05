@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Nav from './components/Nav';
 import About from './components/About';
+import Resume from './components/Resume';
 import Portforlio from './components/Portfolio';
 import ContactForm from './components/Contact';
 import 'font-awesome/css/font-awesome.min.css';
@@ -23,6 +24,8 @@ function App() {
 
   const [contactSelected, setContactSelected] = useState(false);
 
+  const [resumeSelected, setResumeSelected] = useState(false);
+
   return (
     <div>
       <Nav
@@ -31,15 +34,19 @@ function App() {
         currentCategory={currentCategory}
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
+        resumeSelected={resumeSelected}
+        setResumeSelected={setResumeSelected}
       ></Nav>
       <main>
-        {!contactSelected ? (
+        {contactSelected ? (
+          <ContactForm></ContactForm>
+        ): resumeSelected ? (
+          <Resume></Resume>
+        ): (
           <>
             <Portforlio currentCategory={currentCategory}></Portforlio>
             <About></About>
           </>
-        ) : (
-          <ContactForm></ContactForm>
         )}
       </main>
       <footer>

@@ -241,7 +241,7 @@ textarea {
   height: 300px;
   margin-bottom: 50px;
   cursor: pointer;
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 .modalBackdrop {

@@ -107,7 +107,7 @@ const ProjectList = ({ category }) => {
       <div className="flex-row space-between">
         {currentProjects.map((image, i) => (
           <img
-            src={require(`../../assets/small/${category}/${i}.jpg`).default}
+            src={require(`../../assets/large/${category}/${i}.jpg`).default}
             alt={image.name}
             className="img-thumbnail mx-1"
             onClick={() => toggleModal(image, i)}

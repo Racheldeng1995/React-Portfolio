@@ -21,6 +21,13 @@ const ProjectList = ({ category }) => {
       github: 'https://github.com/Racheldeng1995/Food-Print' 
     },
     {
+      name: 'Urban Portfolio',
+      category: 'portfolio',
+      description:
+        'This application is a life sharing social media.',
+      github: 'https://github.com/Racheldeng1995/UrbanPortfolio' 
+    },
+    {
       name: 'Workday Scheduler',
       category: 'front end',
       description:
